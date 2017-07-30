@@ -23,6 +23,8 @@ def get_data():
         
 """ add csv export 
     df.to_csv('example.csv', index=False)
+    df.to_csv('output_{}.csv'.format(pd.datetime.today().strftime('%y%m%d-%H%M%S')), index=False)
+
 """           
     return df
 
