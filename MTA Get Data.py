@@ -2,6 +2,8 @@ from datetime import datetime, timedelta
 import pandas as pd
 import time
 
+### Put Straight into dataframe
+
 def get_data():
 
     end_date = datetime.strptime(time.strftime("%y%m%d"), '%y%m%d')
@@ -20,3 +22,19 @@ def get_data():
         begin_date = begin_date + timedelta(days=7)
 
     return df
+
+
+### View Using Requests
+def get_data():
+
+    end_date = datetime.strptime(time.strftime("%y%m%d"), '%y%m%d')
+    begin_date = datetime.strptime('170701', '%y%m%d')
+    base_link = 'http://web.mta.info/developers/data/nyct/turnstile/turnstile_'
+
+    while(begin_date < end_date):
+
+        link = '{0}{1}.txt'.format(base_link, begin_date.strftime("%y%m%d"))
+        print ("Retrieving data from...")
+        response = requests.get(link)
+        return response.text
+###
