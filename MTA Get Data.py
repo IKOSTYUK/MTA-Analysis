@@ -13,7 +13,7 @@ def get_data():
     while(begin_date < end_date):
 
         link = '{0}{1}.txt'.format(base_link, begin_date.strftime("%y%m%d"))
-        print ("Retrieving data from...")
+        print ("Retrieving data from {}...".format(link))
         try:
             new_df = pd.read_csv(link)
             df = df.append(new_df, ignore_index=True)
