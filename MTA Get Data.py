@@ -20,11 +20,13 @@ def get_data():
         except:
             df = pd.read_csv(link)
         begin_date = begin_date + timedelta(days=7)
-
+        
+""" add csv export 
+    df.to_csv('example.csv', index=False)
+"""           
     return df
 
-
-### View Using Requests
+""" View Using Requests
 def get_data():
 
     end_date = datetime.strptime(time.strftime("%y%m%d"), '%y%m%d')
@@ -37,4 +39,4 @@ def get_data():
         print ("Retrieving data from...")
         response = requests.get(link)
         return response.text
-###
+"""
