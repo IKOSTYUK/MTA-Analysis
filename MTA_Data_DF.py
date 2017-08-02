@@ -21,12 +21,14 @@ def get_data():
             df = pd.read_csv(link)
         begin_date = begin_date + timedelta(days=7)
         
+    return df
+        
 """ add csv export 
     df.to_csv('example.csv', index=False)
     df.to_csv('output_{}.csv'.format(pd.datetime.today().strftime('%y%m%d-%H%M%S')), index=False)
 
 """           
-    return df
+
 
 """ View Using Requests
 def get_data():
