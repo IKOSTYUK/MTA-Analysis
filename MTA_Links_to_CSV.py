@@ -1,10 +1,6 @@
 from datetime import datetime, timedelta
-import pandas as pd
 import time
-import re
-import urllib
 import urllib.request as request
-from bs4 import BeautifulSoup
 import csv
 
 
@@ -22,4 +18,5 @@ def get_data():
         html = response.read()
         with open('{0}.csv'.format(begin_date.strftime("%y%m%d")), 'wb') as f:
                 f.write(html) 
+                
         begin_date = begin_date + timedelta(days=7)
