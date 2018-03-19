@@ -5,8 +5,11 @@ Included are the three scripts used to download, read, and analyze the MTA turns
 
 http://web.mta.info/developers/turnstile.html
 
-The download.py file downloads all .csv files between a specified date range and saves them as individual csv files locally. The read.py file reads in all of the .csv files in the folder to create one datafram from which any station can be filtered.
-the analyze.py file is then used to clean up the data and calculate actual entries from the cummulative entries provided. 
+- download.py file downloads all .csv files between a specified date range and saves them as individual csv files locally. 
+
+- read.py file reads in all of the .csv files in the folder to create one datafram from which any station can be filtered.
+
+- analyze.py file is then used to clean up the data and calculate actual entries from the cummulative entries provided. 
 
 Inspiration for this project came from Metis: Project Benson and other github users who have tackled this analysis! 
 
